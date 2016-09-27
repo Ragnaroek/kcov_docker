@@ -25,3 +25,6 @@ RUN cd $SRC_DIR && \
     cmake .. && \
     make && \
     make install
+
+ENTRYPOINT ["kcov"]
+CMD ["--help"]
