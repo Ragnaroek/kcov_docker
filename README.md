@@ -1,4 +1,6 @@
 [![DockerHub](https://img.shields.io/badge/DockerHub-v33-blue.svg)](https://hub.docker.com/r/ragnaroek/kcov/)
+[![DockerHub](https://img.shields.io/badge/DockerHub-latest-blue.svg)](https://hub.docker.com/r/ragnaroek/kcov_head/)
+
 
 # kcov_docker
 docker image for kcov
@@ -15,6 +17,13 @@ $ docker run --security-opt seccomp=unconfined -v $(pwd):/source kcov:v31
 ```
 The `--security-opt` flag is pretty important since kcov tries to set the `personality` of the binary
 which docker doesn't allow by default.
+
+For experimental usage there is also a automatic head build of kcov
+https://hub.docker.com/r/ragnaroek/kcov_head/
+```
+docker pull ragnaroek/kcov_head:latest
+```
+This docker image only has the latest tag and you may get an unstable build.
 
 ## build it
 
